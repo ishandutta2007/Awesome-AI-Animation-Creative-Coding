@@ -122,7 +122,7 @@ Contributions are welcome and greatly appreciated! 💡
 
 1. 🍴 **Fork the repo** to your GitHub account.
 2. 🌿 **Create a new branch** (`git checkout -b feature/awesome-addition`).
-3. 📝 **Add or update entries** in `README.md` (keep entries accurate, include verifiable pricing/free tier data for SaaS, or star badges for open-source repos).
+3. 📝 **Add or update entries** in `README.md` (keep entries accurate, include verifiable pricing/free tier data for SaaS, or Stars_Badges for open-source repos).
 4. 🚀 **Commit your changes** (`git commit -m 'Add awesome animation tool'`).
 5. 📬 **Submit a Pull Request** with a brief summary of the addition.
 
