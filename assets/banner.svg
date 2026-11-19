@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070913" />
+      <stop offset="50%" stop-color="#0b1021" />
+      <stop offset="100%" stop-color="#050711" />
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3b80">
+        <animate attributeName="stop-color" values="#ff3b80; #7928ca; #00f2fe; #ff3b80" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#7928ca">
+        <animate attributeName="stop-color" values="#7928ca; #00f2fe; #4facfe; #7928ca" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe; #ff3b80; #7928ca; #00f2fe" dur="10s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="glowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007a" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ff007a" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f293d" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#253252" stroke-width="0.75" stroke-opacity="0.35" />
+      <circle cx="40" cy="40" r="1" fill="#4f6b9c" fill-opacity="0.3" />
+    </pattern>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .tag-badge {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+  <!-- Animated Ambient Glowing Orbs (Depth Layer) -->
+  <circle cx="150" cy="120" r="220" fill="url(#glowGrad1)">
+    <animate attributeName="cx" values="150; 250; 150" dur="14s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="120; 80; 120" dur="12s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1050" cy="300" r="240" fill="url(#glowGrad2)">
+    <animate attributeName="cx" values="1050; 950; 1050" dur="16s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="300; 240; 300" dur="13s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Geometric Grid Layer -->
+  <rect width="1200" height="420" fill="url(#grid)" />
+
+  <!-- Dynamic Creative Coding Geometry & Waveform in Background -->
+  <g opacity="0.45">
+    <!-- Sine/Motion Wave curves -->
+    <path d="M 0 350 Q 300 280 600 350 T 1200 350" fill="none" stroke="#7928ca" stroke-width="2.5" stroke-dasharray="8 6">
+      <animate attributeName="d" 
+        values="M 0 350 Q 300 280 600 350 T 1200 350; 
+                M 0 330 Q 300 390 600 330 T 1200 330; 
+                M 0 350 Q 300 280 600 350 T 1200 350" 
+        dur="8s" repeatCount="indefinite" />
+    </path>
+    <path d="M 0 370 Q 300 420 600 360 T 1200 380" fill="none" stroke="#00f2fe" stroke-width="2" stroke-dasharray="4 8">
+      <animate attributeName="d" 
+        values="M 0 370 Q 300 420 600 360 T 1200 380; 
+                M 0 380 Q 300 330 600 390 T 1200 370; 
+                M 0 370 Q 300 420 600 360 T 1200 380" 
+        dur="11s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Floating Vector Kinetic Nodes (Left & Right margins) -->
+  <g opacity="0.65">
+    <!-- Left Orb Rig -->
+    <circle cx="90" cy="210" r="14" fill="#00f2fe" opacity="0.8">
+      <animate attributeName="cy" values="210; 190; 210" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="90" cy="210" r="28" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-opacity="0.4">
+      <animate attributeName="r" values="28; 36; 28" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Right State Machine Rig -->
+    <circle cx="1110" cy="190" r="12" fill="#ff3b80" opacity="0.8">
+      <animate attributeName="cy" values="190; 215; 190" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1110" cy="190" r="26" fill="none" stroke="#ff3b80" stroke-width="1.5" stroke-opacity="0.4">
+      <animate attributeName="r" values="26; 34; 26" dur="5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Central Foreground Content Container (Guaranteed Foreground) -->
+  <g id="foreground-content">
+    <!-- Category Pill Tag -->
+    <g transform="translate(435, 45)">
+      <rect width="330" height="34" rx="17" fill="#141a2f" stroke="#2d3b5c" stroke-width="1.2" />
+      <circle cx="20" cy="17" r="5" fill="#00f2fe">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="36" y="22" fill="#8ec5fc" class="tag-badge">AI MOTION &amp; CREATIVE CODE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="145" text-anchor="middle" class="title-text" font-size="52" fill="url(#primaryGrad)" filter="url(#glow)">
+      Awesome AI Animation
+    </text>
+    <text x="600" y="145" text-anchor="middle" class="title-text" font-size="52" fill="url(#primaryGrad)">
+      Awesome AI Animation
+    </text>
+
+    <!-- Subtitle (Creative Coding Ecosystem) -->
+    <text x="600" y="195" text-anchor="middle" class="title-text" font-size="34" fill="#ffffff" letter-spacing="-0.5px">
+      &amp; Creative Coding Ecosystem
+    </text>
+
+    <!-- Tagline description -->
+    <text x="600" y="240" text-anchor="middle" class="subtitle-text" font-size="16" fill="#94a3b8">
+      Curated state machines, Claude animation skills, programmatic video, Lottie &amp; generative engines
+    </text>
+
+    <!-- Interactive / Feature Highlights Pills -->
+    <g transform="translate(145, 290)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="165" height="42" rx="10" fill="url(#nodeGrad)" stroke="#ff3b80" stroke-opacity="0.4" stroke-width="1.2" />
+        <text x="82" y="26" text-anchor="middle" fill="#ff7da7" class="pill-text">⚡ AI Motion Skills</text>
+      </g>
+
+      <!-- Pill 2 -->
+      <g transform="translate(185, 0)">
+        <rect width="180" height="42" rx="10" fill="url(#nodeGrad)" stroke="#7928ca" stroke-opacity="0.5" stroke-width="1.2" />
+        <text x="90" y="26" text-anchor="middle" fill="#c084fc" class="pill-text">🕹️ State Machines</text>
+      </g>
+
+      <!-- Pill 3 -->
+      <g transform="translate(385, 0)">
+        <rect width="180" height="42" rx="10" fill="url(#nodeGrad)" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1.2" />
+        <text x="90" y="26" text-anchor="middle" fill="#67e8f9" class="pill-text">🎬 Programmatic Video</text>
+      </g>
+
+      <!-- Pill 4 -->
+      <g transform="translate(585, 0)">
+        <rect width="155" height="42" rx="10" fill="url(#nodeGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.2" />
+        <text x="77" y="26" text-anchor="middle" fill="#7dd3fc" class="pill-text">📐 Vector &amp; Lottie</text>
+      </g>
+
+      <!-- Pill 5 -->
+      <g transform="translate(760, 0)">
+        <rect width="150" height="42" rx="10" fill="url(#nodeGrad)" stroke="#34d399" stroke-opacity="0.4" stroke-width="1.2" />
+        <text x="75" y="26" text-anchor="middle" fill="#6ee7b7" class="pill-text">🎨 Creative Coding</text>
+      </g>
+    </g>
+
+    <!-- Bottom Stat / Ecosystem Bar -->
+    <text x="600" y="380" text-anchor="middle" class="tag-badge" fill="#64748b">
+      CURATED SAAS PLATFORMS • 35+ OPEN SOURCE ENGINES • VERIFIED PRICING &amp; LIMITS
+    </text>
+  </g>
+</svg>
